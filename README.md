@@ -138,8 +138,8 @@ Update the Ansible hosts file /etc/ansible/hosts to include the following:
 [elkservers]
 10.0.0.4 ansible_python_interpreter=/usr/bin/python3
 
-**Bonus
-**
+**Bonus**
+
 1. Start an ssh session with the Jump Box ~$ ssh sysadmin@<Jump Box Public IP> (Mine is 40.118.162.169)
 
 2. Start the Ansible Docker container ~$ sudo docker start <Ansible Container> (Mine is lucid_leakey)
