@@ -149,8 +149,11 @@ Update the Ansible hosts file /etc/ansible/hosts to include the following:
 4. Run the playbooks with the following commands:
 
 ansible-playbook /etc/ansible/pentest.yml
+  
 ansible-playbook /etc/ansible/install-elk.yml
+  
 ansible-playbook /etc/ansible/roles/filebeat-playbook.yml
+  
 
 Playbook 2 - install_elk.yml configures only the server(s) listed as [elkservers] in /etc/ansible/hosts
 
