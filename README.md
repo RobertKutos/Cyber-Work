@@ -7,40 +7,9 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
 PlayBook1: Pentest.yml
 
----
-- name: Config Web VM with Docker
-  hosts: webservers
-  become: true
-  tasks:
-  - name: docker.io
-    apt:
-      force_apt_get: yes
-      update_cache: yes
-      name: docker.io
-      state: present
+![Pentest](https://user-images.githubusercontent.com/90853797/133649083-5d48c6b9-b47a-4e24-ac20-3d6b1fae4498.PNG)
 
-  - name: Install pip3
-    apt:
-      force_apt_get: yes
-      name: python3-pip
-      state: present
 
-  - name: Install Docker python module
-    pip:
-      name: docker
-      state: present
-
-  - name: download and launch a docker web container
-    docker_container:
-      name: dvwa
-      image: cyberxsecurity/dvwa
-      state: started
-      published_ports: 80:80
-
-  - name: Enable docker service
-    systemd:
-      name: docker
-      enabled: yes
 
 
 
