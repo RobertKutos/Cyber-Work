@@ -5,15 +5,15 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
 
-Playbook1: Pentest.yml
+**Playbook1:** Pentest.yml
 
 ![Pentest](https://user-images.githubusercontent.com/90853797/133649083-5d48c6b9-b47a-4e24-ac20-3d6b1fae4498.PNG)
 
-Playbook2: install-elk.yml
+**Playbook2:** install-elk.yml
 
 ![Elkdocker](https://user-images.githubusercontent.com/90853797/133649673-f1b6918a-f05b-42f5-a421-f0bc18c37efc.PNG)
 
-Playbook3: filebeat-playbook.yml
+**Playbook3:** filebeat-playbook.yml
 
 ![filebeatsetup](https://user-images.githubusercontent.com/90853797/133649920-217689c6-fc3b-4868-8265-75e14b7547a1.PNG)
 
@@ -25,6 +25,7 @@ Beats in Use
 Machines Being Monitored
 How to Use the Ansible Build
 Description of the Topology
+
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
@@ -62,7 +63,7 @@ A summary of the access policies in place can be found in the table below.
 | Web2       | Yes HTTP            | 216.237.234.185      |
 | Project VM | Yes HTTP            | 216.237.234.185      |
 
-Elk Configuration
+**Elk Configuration**
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because:
 
@@ -70,7 +71,7 @@ Build and deployment is performed automatically, consistently and quickly
 Consistent, rapid configuration and depoloyment of virtual machines ensure all prescribed security meaures can be scripted to minimise attack surfaces while enabling horizontal and elastic scaling by deployment to more or fewer virtual machines in a cluster as required to meet capacity demand.
 Facilitates OS and software updates
 
-Playbook1: pentest.yml
+**Playbook1:** pentest.yml
 pentest.yml is used to set up DMWA servers running in a Docker container on each of the web servies show in the diagram above. It implements the following tasks:
 
 Installs Docker
@@ -79,7 +80,7 @@ Installs Docker's Python Module
 Downloads and launches the DVWA Docker container
 Enables the Docker service
 
-Playbook2: install-elk.yml is used to set up and launch the ELK repository server in a Docker Container on the ELK server. It implements the following tasks:
+**Playbook2:** install-elk.yml is used to set up and launch the ELK repository server in a Docker Container on the ELK server. It implements the following tasks:
 
 Installs Docker
 Installs Python
@@ -88,7 +89,7 @@ Increase virtual memory to support the ELK stack
 Increase memory to support the ELK stack
 Download and launch the Docker ELK container
 
-Playbook3: filebeat-playbook.yml
+**Playbook3:** filebeat-playbook.yml
 filebeat-playbook.yml is used to deploy Filebeat on each of the web servers so they can be monitored centrally using ELK services running on Elk-1. It implements the following tasks:
 
 Downloads and installs Filebeat
@@ -106,12 +107,12 @@ Web-2: 10.0.0.6
 
 We have installed the following Beats on these machines:
 
-Filebeat
+**Filebeat**
 
 ![9](https://user-images.githubusercontent.com/90853797/133655205-bc387917-fd0d-418d-ba1b-527faf572ed6.PNG)
 
 
-Metricbeat
+**Metricbeat**
 
 ![12](https://user-images.githubusercontent.com/90853797/133655271-43f59d02-b63f-4415-9860-b06ac5ef4ddd.PNG)
 
@@ -121,7 +122,7 @@ These Beats allow us to collect the following information from each machine:
 Filebeat collects and ships (sends to ELK for collation, persistence and reporting) logs from VMs running the Filebeat agent
 Metricbeat collects and ships system metrics from the operating system and services of VMs running the Metricbeat
 
-Using the Playbooks
+**Using the Playbooks**
 
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
 
@@ -137,12 +138,8 @@ Update the Ansible hosts file /etc/ansible/hosts to include the following:
 [elkservers]
 10.0.0.4 ansible_python_interpreter=/usr/bin/python3
 
-Using the Playbook
-
-In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
-
-Bonus
-
+**Bonus
+**
 1. Start an ssh session with the Jump Box ~$ ssh sysadmin@<Jump Box Public IP> (Mine is 40.118.162.169)
 
 2. Start the Ansible Docker container ~$ sudo docker start <Ansible Container> (Mine is lucid_leakey)
