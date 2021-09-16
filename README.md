@@ -79,8 +79,7 @@ Installs Docker's Python Module
 Downloads and launches the DVWA Docker container
 Enables the Docker service
 
-Playbook2: install-elk.yml
-install-elk.yml is used to set up and launch the ELK repository server in a Docker Container on the ELK server. It implements the following tasks:
+Playbook2: install-elk.yml is used to set up and launch the ELK repository server in a Docker Container on the ELK server. It implements the following tasks:
 
 Installs Docker
 Installs Python
