@@ -17,3 +17,7 @@ Playbook3: filebeat-playbook.yml
 
 ![filebeatsetup](https://user-images.githubusercontent.com/90853797/133649920-217689c6-fc3b-4868-8265-75e14b7547a1.PNG)
 
+Playbook4: install-metricbeat.yml
+
+![Metricbeat](https://user-images.githubusercontent.com/90853797/133650162-9f031d2c-1178-4bf4-91fd-367bee165676.PNG)
+
