@@ -49,7 +49,7 @@ Access Policies
 The machines on the internal network are not exposed to the public Internet.
 
 Only the Jump Box machine can accept SSH connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-216.237.234.185
+Host IP
 
 Machines within the network can only be accessed by the Jump Box.
 
@@ -58,10 +58,10 @@ A summary of the access policies in place can be found in the table below.
 
 | Name       | Publicly Accessible | Allowed IP Addresses |
 |------------|---------------------|----------------------|
-| JumpBox    | Yes SSH             | 216.237.234.185      |
-| Web1       | Yes HTTP            | 216.237.234.185      |
-| Web2       | Yes HTTP            | 216.237.234.185      |
-| Project VM | Yes HTTP            | 216.237.234.185      |
+| JumpBox    | Yes SSH             | Host IP      |
+| Web1       | Yes HTTP            | Host IP      |
+| Web2       | Yes HTTP            | Host IP      |
+| Project VM | Yes HTTP            | Host IP      |
 
 **Elk Configuration**
 
